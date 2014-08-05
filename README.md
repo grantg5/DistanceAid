@@ -7,3 +7,4 @@ Part time/pet project of mine, currently online in alpha. As I am a full time st
 
 The main idea is that the site offers suggestions for activities for long distance couples to do together, as well as a point value. If the couple did that activity, they click the button saying "Did it for __ points!". It might be a good idea in the future to intigrate some of the activities into the site itself (see if there's a way to launch Skype from the site, etc.) however for now it's built upon trust. I would like to introduce achivements, and create a user's page to display point totals, points per day, perhaps partner's points, and unlocked achivements.
 
+Update: I recently let the domain name distanceaid.com expire, so it can now be accesed at distanceaid.comuv.com.
