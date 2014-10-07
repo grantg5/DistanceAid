@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Welcome to DistanceAid!</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    </head>
+    <body>
+       <!--Navbar-->
+       <div class="navbar">
+        	<div class="navbar-inner">
+				<h1>DistanceAid</h1>
+        	</div>
+        </div>
+        
+                 
+        <div align="center"><h2>Oh, hello!</h2></div>
+        <div align="center"><h3>Welcome to DistanceAid!</h3></div>
+        
+        
+        
+        <!--Document.write all of this in script-->
+        <table class="table">
+        	<thead>
+        		<tr>
+        			<td><h3>Activities</h3></td>
+        		</tr>
+        	</thead>
+        	
+        	<tbody>
+        		<tr>
+        			<td id="replace1"> replace1 </td>
+        			<td><a href="#">What is It?</a></td>
+        			<td>Did It!</td>
+      			</tr>
+      			<tr>
+      				<td id="replace2"> replace2 </td>
+      				<td><a href="#">What is It?</a></td>
+      				<td>Did it!</td>
+      			</tr>
+      			<tr>
+      				<td id="replace3"> replace3 </td>
+      				<td><a href="#">What is It?</a></td>
+      				<td>Did it!</td>
+      			</tr>
+      			
+      			<script type="text/javascript">
+      				//Replace function with DOM
+      				//Activities class      				
+      				function Activity (name, link){
+      					this.name = name;
+      					this.link = link;
+      				}
+      				
+      				//Activities
+      				var movieTime = new Activity ("Movie Time!", "/movietime");
+      				var dinner = new Activity ("What's for Dinner?", "/dinner");
+      				var draw = new Activity ("Draw Each Other!", "/draw");
+      				var gift = new Activity ("Send a Gift!", "/gift");
+      				var mmo = new Activity ("Sign Up for a MMO!", "/mmo");
+      				var picture = new Activity ("Take a Picture!", "/picture");
+      				var daily = new Activity ("Daily Project!", "/project");
+      				
+      				var options = new Array(movieTime, dinner, draw, gift, mmo, picture, daily);
+      				
+      				//Selecting numbers, options
+      				function Random(){
+      					return Math.floor((Math.random() * (options.length)))
+      				}
+      				
+      				var select1 = Random();
+      				var select2 = Random();
+      				while (select1 == select2){
+      					select2 = Random()
+      				}
+      				var select3 = Random();
+      				while ((select1 == select3) || (select2 == select3)){
+      					select3 = Random();
+      				}
+      				
+      				var option11 = options[select1];
+      				var option21 = options[select2];
+      				var option31 = options[select3];
+      				
+      				var option1 = option11.name;
+      				var option2 = option21.name;
+      				var option3 = option31.name;
+      				//getElementById, replace
+      				document.getElementById("replace1").innerHTML=option1;
+      				document.getElementById("replace2").innerHTML=option2;
+      				document.getElementById("replace3").innerHTML=option3;
+      			</script>
+        	</tbody>
+        </table>
+    </body>
+</html>
