@@ -32,11 +32,14 @@
                     $_SESSION['LoggedIn'] = 1;
 
                     echo('<meta http-equiv="refresh" content="0; url=http://distanceaid.comuv.com/">');
-                } else {
-                    echo "Sorry, could not log you in, please ensure your information is correct";
+                } 
+                else {
+                    echo "Sorry, could not log you in, please ensure your information is correct</br>";
+                    echo '<a href="login.php">Go Back</a>';
                 }
             } else {
-                echo "Please Fill out both fields";
+                echo "Please Fill out both fields</br>";
+                echo '<a href="login.php">Go Back</a>';
             }
         } else {
             $unlocked = array();
