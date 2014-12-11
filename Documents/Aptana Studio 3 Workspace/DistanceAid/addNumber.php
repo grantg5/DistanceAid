@@ -31,12 +31,12 @@
         $achivements[$achive_count] = $row;
         $achive_count += 1;
     }
-    
+
     foreach ($achivements as $x){
         if($newPoints >= $x->required){
             $in = false;
             foreach($unlocked as $y){
-                if($y->achivement == $x->name && $y->username == $currentUser){
+                if($y->achievement == $x->name && $y->username == $currentUser){
                     $in = true;
                     break;
                 }

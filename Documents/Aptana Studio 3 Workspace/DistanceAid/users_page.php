@@ -34,8 +34,8 @@
                     echo('<meta http-equiv="refresh" content="0; url=http://distanceaid.comuv.com/">');
                 } 
                 else {
-                    echo "Sorry, could not log you in, please ensure your information is correct</br>";
-                    echo '<a href="login.php">Go Back</a>';
+                    echo '<p style="margin-left: auto; margin-right: auto; text-align: center;">Sorry, could not log you in, please ensure your information is correct</br>';
+                    echo '<a href="login.php">Go Back</a></p>';
                 }
             } else {
                 echo "Please Fill out both fields</br>";

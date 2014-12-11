@@ -29,8 +29,10 @@
               else {
                   $registerQuery = mysqli_query($connection, "INSERT INTO Users (username, password, points, email) VALUES('".$usernameProposed."', '".$passwordProposed."', '".$initialPoints."', '".$emailProposed."')");
                   if ($registerQuery){
-                      echo("<h2 align='center'>Success! Welcome to the Club</h2>");
-                      echo("<p align='center'>Now, try logging in using the form in the Navbar</p>");
+                      $_SESSION['Username'] = $usernameProposed;
+                      $_SESSION['Points'] = 0;
+                      $_SESSION['LoggedIn'] = 1;
+                      echo('<meta http-equiv="refresh" content="0; url=http://distanceaid.comuv.com/users_page.php">');
                   }
                 
                   else {
