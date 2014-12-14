@@ -6,10 +6,29 @@
     <head>
         <title>All Activities</title>
         <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <script src="activities_search.js"></script>
     </head>
     <?php include 'header.php'; ?>
-    <table class="table">
-        <thead><tr><td><h3>All Activities</h3></td></tr></thead>
+
+    <h3 style="margin-left: auto; margin-right: auto; text-align: center;">Search Activities</h3></br>
+    <p style="display: inline;">See all activities at this value and above:</p>
+    <select id="points_dropdown" onchange="number_of_points()">
+        <option value="0"></option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    </br>
+    <input type="text" id="activities_search" placeholder="Search" onkeyup="number_of_points()" />
+
+    <table class="table" id="activities_table">
+        <thead><tr><td><h3>All Activities</h3></td></tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Points it's Worth</th>
+            <th></th>
+        </thead>
         <tbody>
             <form action="addNumber.php" method="post">
             <?php
@@ -22,11 +41,12 @@
                     $count += 1;
                 }
 
-                foreach ($objects as $x){ 
+                foreach ($objects as $x){
                     $buttonValue = $x->points;
                     echo ("<tr>");
                         echo ("<td>".$x->name.'</td>');
                         echo ("<td>".$x->description.'</td>');
+                        echo("<td>".$buttonValue.'</td>');
                         echo ('<td><input type="submit" class="btn-success" name="button" value="Did It for '.$buttonValue.' Points!"></input></td>');
                     echo ("</tr>");
                 }
