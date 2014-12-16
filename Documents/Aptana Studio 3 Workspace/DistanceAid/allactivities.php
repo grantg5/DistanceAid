@@ -7,6 +7,7 @@
         <title>All Activities</title>
         <link rel="stylesheet" type="text/css" href="bootstrap.css">
         <script src="activities_search.js"></script>
+        <script src="sorttable.js"></script>
     </head>
     <?php include 'header.php'; ?>
 
@@ -22,8 +23,10 @@
     </br>
     <input type="text" id="activities_search" placeholder="Search" onkeyup="number_of_points()" />
 
-    <table class="table" id="activities_table">
-        <thead><tr><td><h3>All Activities</h3></td></tr>
+    <h3 style="margin-left: auto; margin-right: auto; text-align: center;">All Activities</h3>
+    <p style="margin-left: auto; margin-right: auto; text-align: center;">Click on the Column Names to Sort!</p>
+    <table class="sortable table" id="activities_table">
+        <thead>
             <th>Name</th>
             <th>Description</th>
             <th>Points it's Worth</th>
