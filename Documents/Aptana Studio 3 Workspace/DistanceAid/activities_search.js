@@ -8,7 +8,7 @@ function number_of_points(){
 	var value = parseInt(value_element.options[value_element.selectedIndex].value);
 	var activities_table = document.getElementById('activities_table');
 
-	for (var i = 2, row; row = activities_table.rows[i]; i++){
+	for (var i = 1, row; row = activities_table.rows[i]; i++){
 		row.style.display = '';
 		if (parseInt(row.cells[2].innerText) < value){
 			row.style.display = 'none';
